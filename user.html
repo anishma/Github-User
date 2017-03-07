@@ -1,0 +1,32 @@
+
+    {{error}}
+    <img ng-src="{{user.avatar_url}}" title="{{user.name}}" class="img">
+    <p>Name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: &nbsp{{user.login}}</p>
+    <p ng-show="company">Company &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: &nbsp{{user.company}}</p>
+    <p ng-show="location">Location &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: &nbsp{{user.location}}</p>
+    <p ng-show="email">Email &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: &nbsp{{user.email}}</p>
+    <p>Number of Repos : &nbsp{{user.public_repos}}</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Repository Name</th>
+        <th>Language</th>
+        <th>Stars</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="repo in repos | orderBy:'-stargazers_count'">
+        <td>
+            <a href="#/repo/{{user.login}}/{{repo.name}}">
+            {{repo.name}}</a>
+        </td>
+        <td>{{repo.language}}</td>
+        <td>{{repo.stargazers_count | number}}</td>
+    </tr>
+
+    </tbody>
+</table>
+<div class="text-center">
+    <a href="#/main" class="btn btn-success" role="button">Back to search</a>
+</div>

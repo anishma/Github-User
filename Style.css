@@ -1,0 +1,60 @@
+.container{
+   /* background-image: url("github.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;*/
+    margin-top: 3.5%;
+}
+body{
+    background-image: url("github.png");
+    background-color: rgba(255,255,255,0.1);
+    background-position: top;
+
+
+   /* background-repeat: no-repeat;*/
+    color:white;
+}
+.heading{
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size:3em;
+    font-weight:600;
+    margin-bottom: 2.5%;
+}
+
+input[type=search]{
+    width: 30%;
+    box-sizing: border-box;
+    border: 2px solid #cccccc;
+    border-radius: 4px;
+    color: #aaaaaa;
+    background-color: white;
+    background-position: 2% 2%;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+}
+input[type=search]:focus{
+    width: 80%;
+}
+.img
+{
+    width: 250px;height: 250px;
+    float: left;
+    margin-left: 22%;
+    margin-right: 2%;
+    border-radius: 125px;
+}
+.btn{
+    padding: 12px 20px 12px 20px;
+    border-radius: 4px;
+    border: 2px solid #cccccc;
+    margin-right: 2%;
+}
+p{
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size:1.3em;
+    font-weight:500;
+}
+p:first-of-type{
+    padding-top: 3%;
+}

@@ -1,0 +1,31 @@
+ <!-- <h1>{{repodetails.name}}</h1>-->
+    <!--<h3>{{repodetails.description}}</h3>-->
+    <img ng-src="{{repodetails.owner.avatar_url}}" title="{{repodetails.owner.name}}" class="img">
+    <p ng-show="name">Repo Name &nbsp: &nbsp{{repodetails.name}}</p>
+    <p ng-show="desc">Repo Desc &nbsp&nbsp: &nbsp{{repodetails.description}}</p>
+    <p>Open Issues : {{repodetails.open_issues}}</p>
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Contributor</th>
+            <th>Name</th>
+            <th>Number of Contributions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in contributors | orderBy:'-contributions'">
+            <td><img ng-src="{{user.avatar_url}}" style="width:50px;height: 50px" title="{{user.login}}"></td>
+            <td><a href="#/user/{{user.login}}/">{{user.login}}</a></td>
+            <td>{{user.contributions | number}}</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>
+<div class="text-center">
+    <a href="#/main" class="btn btn-success" role="button">Back to search</a>
+    <a href="#/user/{{repodetails.owner.login}}" class="btn btn-success" role="button">Back to owner{{repo.owner.login}}</a>
+
+</div>
